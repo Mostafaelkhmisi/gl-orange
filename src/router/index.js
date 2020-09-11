@@ -1,29 +1,35 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import routes from './routes'
+
+const VueScrollTo = require('vue-scrollto');
+Vue.use(VueScrollTo)
 
 Vue.use(VueRouter)
-
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      setTimeout(() => {
+        VueScrollTo.scrollTo(to.hash, 1000);
+        return { selector: to.hash }
+      }, 400)
+    } else if (savedPosition) {
+      setTimeout(() => {
+        VueScrollTo.scrollTo(savedPosition, 1000);
+        return savedPosition;
+      }, 500)
+    } else {
+      VueScrollTo.scrollTo(1500);
+      return { x: 0, y: 0 }
+    }
+  },
 })
+router.beforeEach((to, from, next) => {
+  next();
+});
 
 export default router

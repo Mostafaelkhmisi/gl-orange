@@ -1,0 +1,375 @@
+.videoCover{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    video{
+        width: 100%;
+    }
+    .pauseHover{
+        position: absolute;
+        border:solid 1px $white-text-color;
+        bottom: 5%;
+        transform: rotate(45deg);
+        height: 48px;
+        width: 46px;
+        .pauseContainer{
+            transition: all .2s ease-in-out;
+            &:hover{
+                background-color: $bg-orange-color;
+                position: absolute;
+                margin-top: 3px;
+                margin-left: 3px;
+            }
+
+            i{
+                padding: 15px;
+                color: $white-text-color;
+                transform: rotate(317deg);
+            }
+        }
+    }
+}
+
+.homeInfo{
+    .infoBackground-img{
+        position: absolute;
+        z-index: -1;
+    }
+    .scrollTo-Padding{
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+    .scrollToContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+            .scrolltoShow{
+                background-color: $bg-orange-color;
+                height: 46px;
+                width: 43px;
+                transform: rotate(43deg);
+                transition: all .2s ease-in-out;
+                    i{
+                        transform: rotate(317deg);
+                        padding: 12px;
+                        color: $white-text-color;
+                        font-size: 1.5rem;
+                    }
+            }
+            .scrollto-hoverArrows{
+                display: flex;
+                justify-content: center;
+                color: white;
+                font-size: 1.2rem;
+            }
+    }
+
+
+    .scrolltoText{
+        margin-top: 25px;
+        color: $white-text-color;
+        text-align: center;
+    }
+    .Info-Details{
+        padding-top: 3em;
+    }
+    .rightInfo{
+        .rightInfo-content{
+            width: 90%;
+            border: solid 1px $darkWhite-color;
+            padding: .50em;
+            color: $white-text-color;
+            background-color: rgba(0,0,0,0.5);
+                .inner-border {
+                    position: relative;
+                    padding: 20px;
+                    background: none;
+                    border: none;
+                    color: $white-text-color;
+                    box-sizing: content-box;
+                    text-align: center;
+                    &::before, &::after, .inner-border-content::before, .inner-border-content::after {
+                        display: block;
+                        content: "";
+                        width: 20px;
+                        height: 20px;
+                        position: absolute;
+                    }
+                    &::before {
+                        top: 1px;
+                        left: 1px;
+                        border-top: 1px solid $white-text-color;
+                        border-left: 1px solid $white-text-color;
+                    }
+                    &::after {
+                        top: 1px;
+                        right: 1px;
+                        border-top: 1px solid $white-text-color;
+                        border-right: 1px solid $white-text-color;
+                    }
+                    .inner-border-content{
+                        text-align: left;
+                        margin: 2% 10% 2% 10%;
+                        p{
+                            margin: 0!important;
+                            line-height: 40px;
+                            font-family: SegoeUi;
+                            font-size: 1.45rem;
+                        }
+                        &::before {
+                            bottom: 1px;
+                            left: 1px;
+                            border-bottom: 1px solid $white-text-color;
+                            border-left: 1px solid $white-text-color;
+                        }
+                        &::after {
+                            bottom: 1px;
+                            right: 1px;
+                            border-bottom: 1px solid $white-text-color;
+                            border-right: 1px solid $white-text-color;
+                        }
+                        .orangeWebsite-link{
+                            text-align: center;
+                            margin-top: 20px;
+                            .link-hover{
+                                transition: all .2s ease-in-out;
+                                &:hover,&:hover i{
+                                    transform: scale(1.2);
+                                    color: $bg-orange-color;
+                                }
+                                i{
+                                    color: $white-text-color;
+                                    width: 5px;
+                                    transition: all .2s ease-in-out;
+                                }
+                                .second-arrow{
+                                    opacity: .5;
+                                }
+                                .third-arrow{
+                                    opacity: .2;
+                                }
+                                a{
+                                    text-decoration: none;
+                                    color: $bg-orange-color;
+                                    padding: 10px;
+                                }
+                            }
+                            
+                        }
+                    }
+                
+                }
+        }
+    }
+}
+
+
+
+@media (max-width:1701px){
+    .inner-border-content{
+        p{
+            line-height: 35px!important;
+            font-size: 1.3rem!important;
+        }
+    }
+}
+
+@media (max-width:1600px){
+    .inner-border-content{
+        p{
+            line-height: 30px!important;
+            font-size: 1.2rem!important;
+        }
+    }
+}
+@media (max-width:1470px){
+    .inner-border-content{
+        p{
+            line-height: 30px!important;
+            font-size: 1.1rem!important;
+        }
+    }
+}
+@media (max-width:1450px){
+    .inner-border-content{
+        p{
+            line-height: 25px!important;
+            font-size: 1rem!important;
+        }
+    }
+}
+@media (max-width:1330px){
+    .inner-border-content{
+        p{
+            line-height: 20px!important;
+            font-size: .8rem!important;
+        }
+    }
+}
+
+@media (max-width:1200px){
+    .scrollTo-Padding{
+        padding-top: 2em!important;
+        padding-bottom: 2em!important;
+    }
+    .Info-Details{
+        padding-top: 0px!important;
+    }
+    .rightInfo-content{
+        width: 70%!important;
+        margin: auto;
+        .inner-border {
+            padding: 10px!important;
+        }
+        img{
+            width: 50%;
+        }
+        .inner-border-content{
+            p{
+                line-height: 25px!important;
+                font-size: 1rem!important;
+            }
+        }
+    }
+}
+
+@media (max-width:1050px){
+    .scrollTo-Padding{
+        .scrolltoText{
+            margin-top: 15px!important;
+        }
+    }
+    .rightInfo-content{
+        .inner-border-content{
+            p{
+                line-height: 20px!important;
+                font-size: .9rem!important;
+            }
+        }
+    }
+}
+@media (max-width:1000px){
+    .rightInfo-content{
+        width: 80%!important;
+        .inner-border-content{
+            p{
+                line-height: 20px!important;
+                font-size: .9rem!important;
+            }
+        }
+    }
+}
+
+@media (max-width:980px){
+    .rightInfo-content{
+        width: 60%!important;
+        .inner-border-content{
+            p{
+                line-height: 20px!important;
+                font-size: .8rem!important;
+            }
+        }
+    }
+}
+
+@media (max-width:905px){
+    .rightInfo-content{
+        .inner-border-content{
+            p{
+                line-height: 18px!important;
+                font-size: .7rem!important;
+            }
+        }
+    }
+}
+
+@media (max-width:850px){
+    .scrollTo-Padding{
+        padding-top: 1em!important;
+        padding-bottom: 1em!important;
+        .scrolltoText{
+            margin-top: 10px!important;
+            h5{
+                font-size: 1rem!important;
+            }
+        }
+        .scrolltoShow{
+            height: 40px!important;
+            width: 37px!important;
+            i{
+                font-size: 1.2rem!important;
+            }
+        }
+    }
+    .rightInfo-content{
+        .inner-border{
+            padding: 0px!important;
+        }
+        .inner-border-content{
+            margin: 1% 2% 1% 2%!important;
+            p{
+                line-height: 18px!important;
+                font-size: .7rem!important;
+            }
+        }
+    }
+}
+
+
+@media (max-width:710px){
+    .scrollTo-Padding{
+        padding-top: .9em!important;
+        padding-bottom: .9em!important;
+        .scrolltoText{
+            margin-top: 5px!important;
+            h5{
+                font-size: .8rem!important;
+            }
+        }
+    }
+}
+
+@media (max-width:675px){
+    .rightInfo-content{
+        .inner-border-content{
+            margin: 1% 2% 1% 2%!important;
+            p{
+                line-height: 15px!important;
+                font-size: .5rem!important;
+            }
+        }
+    }
+}
+@media (max-width:630px){
+    .scrollTo-Padding{
+        padding-bottom: .2em!important;
+    }
+    .rightInfo-content{
+        .inner-border-content{
+            margin: 1% 2% 1% 2%!important;
+            .orangeWebsite-link{
+                margin-top: 10px!important;
+            }
+            p{
+                line-height: 15px!important;
+                font-size: .5rem!important;
+            }
+        }
+    }
+}
+@media (max-width:560px){
+    .rightInfo-content{
+        padding: .10em!important;
+        .inner-border-content{
+            margin: 2% 3% 2% 3%!important;
+            .orangeWebsite-link{
+                margin-top: 5px!important;
+            }
+            p{
+                line-height: 11px!important;
+                font-size: .5rem!important;
+            }
+        }
+    }
+}
