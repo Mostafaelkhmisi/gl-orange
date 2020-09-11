@@ -1,7 +1,7 @@
 <template>
 <div>
     <div class="videoCover">
-        <video src="@assets/videos/cover-videos/After-Earth.mp4" autoplay loop muted type="video/mp4"
+        <video src="@assets/videos/cover-videos/After-Earth.webm" autoplay loop muted type="video/mp4"
         @canplay="updatePaused" @playing="updatePaused" @pause="updatePaused"></video>
         <div class="pauseHover">
             <div class="pauseContainer"><i v-if="!this.paused" class="fas fa-pause" @click="pause"></i> <i v-if="this.paused" @click="play" class="fas fa-play"></i></div>
