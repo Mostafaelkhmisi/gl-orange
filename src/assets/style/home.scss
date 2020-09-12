@@ -190,6 +190,15 @@
             transform: rotate(45deg);
         }
     }
+    .slick-slider{
+        width: 80%;
+        margin: auto;
+    }
+    .home-gallery-glider{
+        img{
+            width: 100%;
+        }
+    }
 }
 @media (max-width:1701px){
     .inner-border-content{
