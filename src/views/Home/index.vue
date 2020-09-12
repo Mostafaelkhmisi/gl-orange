@@ -10,14 +10,16 @@
 
     <homeInfo> </homeInfo>
     <ourGames> </ourGames>
+    <Howtoplay> </Howtoplay>
 </div>
 </template>
 
 <script>
 import homeInfo from './home-info'
 import ourGames from './ourGames'
+import Howtoplay from './Howtoplay'
 export default {
-  components: { homeInfo, ourGames },
+  components: { homeInfo, ourGames, Howtoplay },
   data () {
     return {
       videoElement: null,
