@@ -171,25 +171,6 @@
     background-image: url("../imgs/backgrounds/SHbg.jpg");
     background-position: center center;
     padding-top: 100px;
-    .ourGamesTitle{
-        font-family: SegoeUi;
-        color: #fff;
-        h2{
-            display: flex;
-            align-items: center;
-            span{
-                color: $bg-orange-color;
-                padding-right: 10px;
-            }
-        }
-        .title-orangeBox{
-            width: 15px;
-            height: 15px;
-            margin: 20px;
-            background-color: $bg-orange-color;
-            transform: rotate(45deg);
-        }
-    }
     .slick-slider{
         width: 80%;
         margin: auto;
@@ -205,6 +186,63 @@
     background-image: url('../imgs/backgrounds/976758.jpg');
     background-position: center center;
     background-attachment: fixed;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow: hidden;
+    .howto_box{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 200px;
+        .howto_box_wrap{
+            transform: rotate(45deg);
+            width: 300px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .blackBG{
+                background-color: rgba(0,0,0,0.8);
+                position: absolute;
+                top: 25px;
+                left: 25px;
+                right: -25px;
+                bottom: -25px;
+                z-index: -1;
+            }
+                .howto_box_number_wrap{
+                    position: absolute;
+                    width: 70px;
+                    height: 70px;
+                    top: -1%;
+                    left: 2%;
+                    background-color: $bg-orange-color;
+                    text-align: center;
+                    color: $white-text-color;
+                    padding-top: 10px;
+                    font-size: 2rem;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        .howto_box_number{
+                            transform: rotate(-45deg);
+                        }
+                }
+            .inner_howto_box_wrap{
+                border: solid 1px $bg-orange-color;
+                padding: 24px;
+                .inner_howto_box_rotate{
+                    transform: rotate(-45deg);
+                    margin: 35px;
+                    img{
+                        max-width: 200px;
+                    }
+                    h6{
+                        color: $white-text-color;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
 }
 @media (max-width:1701px){
     .inner-border-content{

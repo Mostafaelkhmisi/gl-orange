@@ -15,7 +15,7 @@
             <div class="rightInfo-content">
                 <div class="inner-border">
                     <div class="inner-border-content">
-                        <div class="row">
+                        <div class="row m-0 p-0">
                             <div class="col-6"> <img src="@assets/imgs/client/Orange.svg" width="80%" /></div>
                             <div class="col-6"> <img src="@assets/imgs/client/Orange.svg" width="80%" /> </div>
                             <div class="col-12">

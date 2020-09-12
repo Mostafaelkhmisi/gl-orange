@@ -6,3 +6,28 @@ $bg-orange-color:#FF6600;
 $white-text-color:#fff;
 $darkWhite-color:#a4a8ab;
 $dimWhite-color:#ccc;
+
+.custom80-Container{
+    width: 80%;
+    margin: auto!important;
+}
+.ourGamesTitle{
+    padding-bottom: 150px;
+    font-family: SegoeUi;
+    color: #fff;
+    h2{
+        display: flex;
+        align-items: center;
+        span{
+            color: $bg-orange-color;
+            padding-right: 10px;
+        }
+    }
+    .title-orangeBox{
+        width: 15px;
+        height: 15px;
+        margin: 20px;
+        background-color: $bg-orange-color;
+        transform: rotate(45deg);
+    }
+}
