@@ -167,6 +167,30 @@
     }
 }
 
+.games-section{
+    background-image: url("../imgs/backgrounds/SHbg.jpg");
+    background-position: center center;
+    padding-top: 100px;
+    .ourGamesTitle{
+        font-family: SegoeUi;
+        color: #fff;
+        h2{
+            display: flex;
+            align-items: center;
+            span{
+                color: $bg-orange-color;
+                padding-right: 10px;
+            }
+        }
+        .title-orangeBox{
+            width: 15px;
+            height: 15px;
+            margin: 20px;
+            background-color: $bg-orange-color;
+            transform: rotate(45deg);
+        }
+    }
+}
 @media (max-width:1701px){
     .inner-border-content{
         p{
@@ -184,6 +208,7 @@
 
 @media (max-width:1000px){
     .rightInfo-content{
+        width: 90%!important;
         .inner-border-content{
             p{
                 line-height: 20px!important;

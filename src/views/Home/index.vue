@@ -9,13 +9,15 @@
     </div>
 
     <homeInfo> </homeInfo>
+    <ourGames> </ourGames>
 </div>
 </template>
 
 <script>
 import homeInfo from './home-info'
+import ourGames from './ourGames'
 export default {
-  components: { homeInfo },
+  components: { homeInfo, ourGames },
   data () {
     return {
       videoElement: null,
