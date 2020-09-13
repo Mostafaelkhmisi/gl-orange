@@ -8,6 +8,13 @@ const routes = [
     path: '/tournaments',
     name: 'Tournaments',
     component: () => import(/* webpackChunkName: "Tournaments" */ '@views/tournaments/index.vue')
+  },
+  {
+    path: '/tournament/:id',
+    name: 'Tournament',
+    component: function () {
+      return import(/* webpackChunkName: "Tournament" */ '@views/tournaments/tournament/tournament.vue')
+    }
   }
 ]
 

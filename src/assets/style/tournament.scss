@@ -3,6 +3,7 @@
     .Tournament-cover{
         z-index: -1;
         object-fit: cover;
+        width: 100%;
     }
     #gallery-prev,#gallery-next{
         color: $white-text-color;
@@ -145,11 +146,16 @@
             transform: rotate(-45deg);
         }
     }
+    @media(max-width:992px){
+        #gallery-prev{
+            left: 1.5%!important;
+        }
+    }
     #gallery-prev{
         right: 20%;
     }
     #gallery-next{
-        right: 1%;
+        right: 1.5%;
     }
     .slick-slider{
         max-height: 400px;
@@ -162,6 +168,7 @@
     .tournament-gallery-glider{
         outline: none;
         text-align: center;
+        margin-bottom: 15px;
         .tournament-joinBtn{
             background-color: $orange-text-color;
             margin-top: 10px;
@@ -191,14 +198,27 @@
                 i{
                     font-size: 1rem !important;
                 }
+                .game_logo{
+                    float: right;
+                    padding-top: 40px;
+                    padding-right: 30px;
+                }
+                .tournamentTextsHolder{
+                    padding-top: 40px;
+                    padding-left: 25px;
+                }
                 .tournamentName{
                     font-size: 1.5rem;
                     padding: 10px;
                     text-align: center;
                     background-color: rgba(0,0,0,0.7);
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0%;
                 }
                 .tournamentDate, .tournamentPlayers, .tournamentPrize{
                     font-size: 1.3rem;
+                    padding: 4px;
                     text-align: start;
                 }
             }
@@ -209,6 +229,11 @@
 .inputContainer{
     position: relative;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    @media(max-width:1000px){
+        #date{
+            margin-bottom: 100px!important;
+        }
+    }
     .contact-errors-text{
         margin-left: 20px;
         position: absolute;
@@ -218,8 +243,8 @@
     }
         label{
             position: absolute;
-            top:26px;
-            left: 45px;
+            top: 4px;
+            left: 4px;
             margin: 10px;
             padding: 0 10px;
             background-color: transparent;
@@ -228,8 +253,8 @@
             transition: all .2s ease-in-out;
         }
     .activeInput{
-        top: -6px;
-        left: 60px;
+        top: -24px;
+        left: 30px;
         font-size: 1.2rem;
         font-weight: 500;
         text-transform: uppercase;
@@ -238,7 +263,6 @@
     .inputs{
         width: 100%;
         padding: 15px;
-        margin: 20px;
         margin-bottom: 30px;
         border: none;
         outline: none;

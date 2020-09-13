@@ -5,15 +5,15 @@
     </SectionTitle>
 
     <div class="row m-0 p-0">
-      <div class="col-3 pl-0 inputContainer">
+      <div class="col-md-12 col-lg-6 col-xl-3 pl-0 inputContainer">
         <label for="tournament" :class='clazzTournament'> Tournament </label>
         <input @focus="onFocusTournament($event)" v-model="form.tournament" @blur="onBlur" class="inputs" id="tournament" type="text" required>
       </div>
-      <div class="col-3 inputContainer">
+      <div class="col-md-12 col-lg-6 col-xl-3 pl-0 inputContainer">
         <label for="game" :class='clazzGame'> Game </label>
         <input @focus="onFocusGame($event)" v-model="form.game" @blur="onBlur" class="inputs" id="game" type="text" required>
       </div>
-      <div class="col-3 inputContainer">
+      <div class="col-md-12 col-lg-6 col-xl-3 pl-0 inputContainer">
         <!-- <label for="date" :class='clazzDay'> Day </label> -->
         <input @focus="onFocusDay($event)" v-model="form.day" @blur="onBlur" class="inputs" id="date" type="date" required>
       </div>
@@ -27,16 +27,21 @@
               <div id="gallery-next"> <div class="gallery-next-orangeBox"> <i class="fas fa-chevron-right" ></i> </div> </div>
             </template>
                 <div v-for="tournament in searchTournaments" :key="tournament.id" class="tournament-gallery-glider">
-                    <div class="img_imgOverlay">
-                        <img :src="tournament.img" draggable="false" alt="">
-                        <div class="tournamentImg-overlay">
-                           <div class="tournamentDate"><i class="fas fa-user-friends"></i> {{tournament.date}}</div>
-                            <div class="tournamentPlayers"><i class="fas fa-user-friends"></i> {{tournament.joined}}</div>
-                            <div class="tournamentPrize"><i class="fas fa-trophy"></i>  {{tournament.prize}} EGP</div>
-                            <div class="game_logo"> <img src="https://via.placeholder.com/100x100?text=Visit+Blogging.com+NowC/O https://placeholder.com/" alt="" srcset=""> </div>
-                            <div class="tournamentName">{{ tournament.name }}</div>
-                        </div>
-                    </div>
+                    <router-link :to="'/tournament/'+tournament.id" draggable="false">
+                      <div class="img_imgOverlay">
+                          <img :src="tournament.img" draggable="false" alt="">
+                          <div class="tournamentImg-overlay">
+                              <div class="game_logo"> <img src="https://via.placeholder.com/100x100?text=Visit+Blogging.com+NowC/O https://placeholder.com/" alt="" srcset=""> </div>
+
+                              <div class="tournamentTextsHolder">
+                                <div class="tournamentDate"><i class="fas fa-user-friends"></i> {{tournament.date}}</div>
+                                <div class="tournamentPlayers"><i class="fas fa-user-friends"></i> {{tournament.joined}}</div>
+                                <div class="tournamentPrize"><i class="fas fa-trophy"></i>  {{tournament.prize}} EGP</div>
+                              </div>
+                              <div class="tournamentName">{{ tournament.name }}</div>
+                          </div>
+                      </div>
+                    </router-link>
                 </div>
     </VueSlickCarousel>
 
