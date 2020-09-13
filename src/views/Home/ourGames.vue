@@ -1,8 +1,8 @@
 <template>
-<div class="games-section">
-  <div class="row justify-content-center m-0 p-0">
-    <div class="ourGamesTitle"> <h2> <div class="title-orangeBox"></div>  <span>OUR</span> GAMES <div class="title-orangeBox"></div></h2> </div>
-  </div>
+<div id="ourGames" class="games-section">
+    <SectionTitle>
+        <template #title> <span>OUR</span> GAMES </template>
+    </SectionTitle>
 
     <VueSlickCarousel v-bind="sliderSettings">
         <template v-slot:prevArrow>
@@ -29,8 +29,9 @@
 <script>
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import SectionTitle from '@components/layout/SectionTitle.vue'
 export default {
-  components: { VueSlickCarousel },
+  components: { VueSlickCarousel, SectionTitle },
   data () {
     return {
       sliderSettings: {

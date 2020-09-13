@@ -3,8 +3,8 @@
     <!-- <img class="infoBackground-img" src="@assets/imgs/backgrounds/SHbg.jpg" width="100%"> -->
     <div class="scrollTo-Padding">
         <div class="scrollToContainer">
-            <div class="scrolltoShow"><i class="fas fa-arrow-down"></i></div>
-            <div class="scrollto-hoverArrows"><i class="fas fa-chevron-down"></i></div>
+            <div class="scrolltoShow" v-scroll-to="{el:'#ourGames', duration: 1000 }"> <i class="fas fa-arrow-down"></i></div>
+            <!-- <div class="scrollto-hoverArrows"><i class="fas fa-chevron-down"></i></div> -->
         </div>
         <div class="scrolltoText"> <h5>Scroll to show more</h5> </div>
     </div>

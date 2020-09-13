@@ -5,7 +5,7 @@
         <img src="@assets/imgs/client/Orange.svg" />
         <div class="customNav">
           <router-link to="/" active-class="active" exact>Home</router-link>
-          <router-link to="/about" active-class="active">Tournaments</router-link>
+          <router-link to="/tournaments" active-class="active">Tournaments</router-link>
         </div>
       </div>
     </div>
@@ -25,7 +25,7 @@
         <img src="@assets/imgs/client/Orange.svg" />
         <div class="customNav">
           <router-link to="/" active-class="active" exact>Home</router-link>
-          <router-link to="/about" active-class="active">Tournaments</router-link>
+          <router-link to="/tournaments" active-class="active">Tournaments</router-link>
         </div>
       </div>
     </div>

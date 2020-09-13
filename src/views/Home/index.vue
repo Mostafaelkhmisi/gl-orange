@@ -11,6 +11,7 @@
     <homeInfo> </homeInfo>
     <ourGames> </ourGames>
     <Howtoplay> </Howtoplay>
+    <Contactus> </Contactus>
 </div>
 </template>
 
@@ -18,8 +19,9 @@
 import homeInfo from './home-info'
 import ourGames from './ourGames'
 import Howtoplay from './Howtoplay'
+import Contactus from './home-contact'
 export default {
-  components: { homeInfo, ourGames, Howtoplay },
+  components: { homeInfo, ourGames, Howtoplay, Contactus },
   data () {
     return {
       videoElement: null,

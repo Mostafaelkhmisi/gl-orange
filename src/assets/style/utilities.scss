@@ -1,15 +1,21 @@
 //  Backgrounds Colors
-$bg-orange-color:#FF6600;
-
+$bg-orange-color:#FF6600CC;
 
 //  Text Colors
 $white-text-color:#fff;
-$darkWhite-color:#a4a8ab;
+$darkWhite-color:#707070;
 $dimWhite-color:#ccc;
+$orange-text-color:#FF6600;
 
 .custom80-Container{
     width: 80%;
     margin: auto!important;
+}
+.rotated-titled-box{
+    width: 15px;
+    height: 15px;
+    background-color: $bg-orange-color;
+    transform: rotate(45deg);
 }
 .ourGamesTitle{
     padding-bottom: 150px;
@@ -23,11 +29,30 @@ $dimWhite-color:#ccc;
             padding-right: 10px;
         }
     }
-    .title-orangeBox{
-        width: 15px;
-        height: 15px;
-        margin: 20px;
-        background-color: $bg-orange-color;
-        transform: rotate(45deg);
+    .title_box_line_left{
+        width: 80px;
+        height: 2px;
+        background-image: linear-gradient(to left, #fff 1%, rgba(0, 0, 0, 0.1));
+    }
+    .title_box_line_right{
+        width: 80px;
+        height: 2px;
+        background-image: linear-gradient(to right, #fff 1%, rgba(0, 0, 0, 0.1));
+    }
+    .title-orangeBox-left{
+        margin-right: 20px;
+        @extend .rotated-titled-box;
+    }
+    .title-orangeBox-right{
+        margin-left: 20px;
+        @extend .rotated-titled-box;
+    }
+}
+@media (max-width:1100px){
+    .title_box_line_left{
+        width: 55px!important;
+    }
+    .title_box_line_right{
+        width: 55px!important;
     }
 }
