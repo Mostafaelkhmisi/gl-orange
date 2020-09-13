@@ -91,6 +91,71 @@ const state = {
       prize: '4000',
       joined: '500/600',
       description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their'
+    },
+    {
+      id: '7',
+      img: 'https://via.placeholder.com/439x248?text=Visit+Blogging.com+NowC/O https://placeholder.com/',
+      name: 'Pubg',
+      date: '12 Jan 2020',
+      time: '20:00 PM',
+      format: '1v1',
+      title: 'eSports League - Pubg',
+      game: 'Pubg',
+      prize: '1000',
+      joined: '100/200',
+      description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their'
+    },
+    {
+      id: '8',
+      img: 'https://via.placeholder.com/439x248?text=Visit+Blogging.com+NowC/O https://placeholder.com/',
+      name: 'Cod',
+      date: '12 Jan 2020',
+      time: '20:00 PM',
+      format: '1v1',
+      title: 'eSports League - Cod',
+      game: 'Cod',
+      prize: '1000',
+      joined: '100/200',
+      description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their'
+    },
+    {
+      id: '9',
+      img: 'https://via.placeholder.com/439x248?text=Visit+Blogging.com+NowC/O https://placeholder.com/',
+      name: 'Clash',
+      date: '12 Jan 2020',
+      time: '20:00 PM',
+      format: '1v1',
+      title: 'eSports League - Clash',
+      game: 'Clash',
+      prize: '1000',
+      joined: '100/200',
+      description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their'
+    },
+    {
+      id: '10',
+      img: 'https://via.placeholder.com/439x248?text=Visit+Blogging.com+NowC/O https://placeholder.com/',
+      name: 'Valorant',
+      date: '12 Jan 2020',
+      time: '20:00 PM',
+      format: '1v1',
+      title: 'eSports League - Valorant',
+      game: 'Valorant',
+      prize: '1000',
+      joined: '100/200',
+      description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their'
+    },
+    {
+      id: '11',
+      img: 'https://via.placeholder.com/439x248?text=Visit+Blogging.com+NowC/O https://placeholder.com/',
+      name: 'Fortnite',
+      date: '12 Jan 2020',
+      time: '20:00 PM',
+      format: '1v1',
+      title: 'eSports League - Fortnite',
+      game: 'Fortnite',
+      prize: '1000',
+      joined: '100/200',
+      description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their'
     }
 
   ]

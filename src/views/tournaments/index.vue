@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div class="mainTournament-Div">
+  <div class="mainTournament-Div">
         <img class="Tournament-cover" src="https://via.placeholder.com/1920x400?text=Visit+Blogging.com+NowC/O https://placeholder.com/">
 
         <VueSlickCarousel v-bind="sliderSettings">
@@ -24,16 +24,28 @@
             </template>
         </VueSlickCarousel>
 
-    </div>
+      <downAnchor>
+          <template #anchor>
+            <div class="scrolltoShow" v-scroll-to="{el:'#browseGames', duration: 1000 }">
+                <i class="fas fa-arrow-down"></i>
+            </div>
+        </template>
+      </downAnchor>
+
+  </div>
+ <browseGames> </browseGames>
+
 </div>
 </template>
 <script>
 
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import downAnchor from '@components/layout/down-Anchor.vue'
+import browseGames from './Browse.vue'
 import { mapGetters } from 'vuex'
 export default {
-  components: { VueSlickCarousel },
+  components: { VueSlickCarousel, downAnchor, browseGames },
   data () {
     return {
       sliderSettings: {

@@ -1,13 +1,13 @@
 <template>
 <div class="homeInfo">
     <!-- <img class="infoBackground-img" src="@assets/imgs/backgrounds/SHbg.jpg" width="100%"> -->
-    <div class="scrollTo-Padding">
-        <div class="scrollToContainer">
-            <div class="scrolltoShow" v-scroll-to="{el:'#ourGames', duration: 1000 }"> <i class="fas fa-arrow-down"></i></div>
-            <!-- <div class="scrollto-hoverArrows"><i class="fas fa-chevron-down"></i></div> -->
+<downAnchor>
+    <template #anchor>
+        <div class="scrolltoShow" v-scroll-to="{el:'#ourGames', duration: 1000 }">
+            <i class="fas fa-arrow-down"></i>
         </div>
-        <div class="scrolltoText"> <h5>Scroll to show more</h5> </div>
-    </div>
+     </template>
+</downAnchor>
 
     <div class="row m-0 Info-Details">
         <div class="col-md-12 col-lg-12 col-xl-6"></div>
@@ -34,8 +34,9 @@
 </template>
 
 <script>
+import downAnchor from '@components/layout/down-Anchor.vue'
 export default {
-
+  components: { downAnchor }
 }
 </script>
 
