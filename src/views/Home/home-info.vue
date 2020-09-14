@@ -17,7 +17,7 @@
                     <div class="inner-border-content">
                         <div class="row m-0 p-0">
                             <div class="col-6"> <img src="@assets/imgs/client/Orange.svg" width="80%" /></div>
-                            <div class="col-6"> <img src="@assets/imgs/client/Orange.svg" width="80%" /> </div>
+                            <div class="col-6"> <img class="go-gamespng" src="@assets/imgs/client/go-games.png" width="80%" /> </div>
                             <div class="col-12">
                                     <p>For the first time in Egypt .. GO Games Internet packages for mobile gaming customers from the first pound of the day! GO Games</p>
                                     <p> For 10 EGP per month, you will have 1000 MB length of the month and 300 MB for free at Wake ends</p>

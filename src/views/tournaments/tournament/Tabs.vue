@@ -4,14 +4,13 @@
             mode="out-in">
     <article>
             <header class="tabs tabBtns" >
-                    <div v-for="(tab, index) in tabs" :key="index">
-                        <button :class="{ 'activeTab' : tab.isActive }" @click="selectedTab(tab)"> {{tab.name}} </button>
-                    </div>
+              <div v-for="(tab, index) in tabs" :key="index">
+                  <button :class="{ 'activeTab' : tab.isActive }" @click="selectedTab(tab)"> {{tab.name}} </button>
+              </div>
             </header>
 
-            <section class="tournament-details">
-                <slot>
-                </slot>
+            <section class="tournament-tabs">
+                <slot></slot>
             </section>
     </article>
 </transition>

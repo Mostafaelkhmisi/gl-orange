@@ -11,7 +11,9 @@
                  <div class="blackBG"></div>
                  <div class="inner_howto_box_wrap">
                      <div class="inner_howto_box_rotate">
-                        <img src="@assets/imgs/client/Orange.svg" width="100%" draggable="false">
+                         <div class="client-logos">
+                            <img src="@assets/imgs/client/Orange.svg" width="100%" draggable="false">
+                        </div>
                         <h6>Be an Orange customer</h6>
                     </div>
                         <div class="howto_box_number_wrap"> <div class="howto_box_number"> 1 </div>  </div>
@@ -23,7 +25,9 @@
                 <div class="blackBG"></div>
                 <div class="inner_howto_box_wrap">
                     <div class="inner_howto_box_rotate">
-                        <img src="@assets/imgs/client/Orange.svg" width="100%" draggable="false">
+                        <div class="client-logos">
+                            <img src="@assets/imgs/client/go-games.png" width="100%" draggable="false">
+                        </div>
                         <h6><span>subscribe</span> orange go games package</h6>
                     </div>
                 </div>
@@ -35,7 +39,9 @@
                 <div class="blackBG"></div>
                 <div class="inner_howto_box_wrap">
                     <div class="inner_howto_box_rotate">
-                        <img src="@assets/imgs/client/Orange.svg" width="100%" draggable="false">
+                        <div class="client-logos consleImg">
+                            <img src="@assets/imgs/client/console.svg" width="100%" draggable="false">
+                        </div>
                         <h6>Register in <span>our games</span></h6>
                     </div>
                 </div>

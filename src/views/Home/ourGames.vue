@@ -4,85 +4,84 @@
         <template #title> <span>OUR</span> GAMES </template>
     </SectionTitle>
 
-    <VueSlickCarousel v-bind="sliderSettings">
-        <template v-slot:prevArrow>
-            <i class="fas fa-chevron-left" id="gallery-prev"></i>
-        </template>
+        <!-- <Pagination v-if="getHomecarousel"
+          :totalRecords="getHomecarousel.length"
+          :perPageOptions="perPageOptions"
+          v-model="pagination"
+        />
+        <div v-for="img in computedTableData" :key="img.id">
             <div class="home-gallery-glider">
-                  <img src="@assets/imgs/backgrounds/SHbg.jpg" draggable="false" alt="">
+                  <img :src="img.img" draggable="false" alt="">
             </div>
-            <div class="home-gallery-glider">
-                  <img src="@assets/imgs/backgrounds/SHbg.jpg" draggable="false" alt="">
+        </div> -->
+        <div class="row home_carousel_imgs">
+            <div class="col-4 carousel-imgs firstImg">
+                  <div class="home_img_overlay">
+                    <div class="main_img_container">
+                      <img class="main_img" src="@assets/imgs/home-games/image-1.png" draggable="false" alt="">
+                      <div class="game_logo"> <img src="@assets/imgs/gameslogo/pubg-logo.png" alt=""> </div>
+                    </div>
+                  </div>
             </div>
-                        <div class="home-gallery-glider">
-                  <img src="@assets/imgs/backgrounds/SHbg.jpg" draggable="false" alt="">
+            <div class="col-4 carousel-imgs">
+                  <div class="home_img_overlay">
+                    <div class="main_img_container">
+                      <img class="main_img secondImage" src="@assets/imgs/home-games/image-2.png" draggable="false" alt="">
+                      <div class="game_logo"> <img src="@assets/imgs/gameslogo/mobilelegends-logo.png" alt=""> </div>
+                    </div>
+                  </div>
+                  <div class="home_img_overlay">
+                    <div class="main_img_container">
+                      <img class="main_img thirdImage" src="@assets/imgs/home-games/image-3.png" draggable="false" alt="">
+                      <div class="game_logo"> <img src="@assets/imgs/gameslogo/clash-logo.png" alt=""> </div>
+                    </div>
+                  </div>
             </div>
-                        <div class="home-gallery-glider">
-                  <img src="@assets/imgs/backgrounds/SHbg.jpg" draggable="false" alt="">
+            <div class="col-4 carousel-imgs">
+                  <div class="home_img_overlay">
+                    <div class="main_img_container">
+                      <img class="main_img" src="@assets/imgs/home-games/image-4.png" draggable="false" alt="">
+                      <div class="game_logo"> <img src="@assets/imgs/gameslogo/pubg-logo.png" alt=""> </div>
+                    </div>
+                  </div>
+                  <div class="home_img_overlay">
+                    <div class="main_img_container">
+                      <img class="main_img" src="@assets/imgs/home-games/image-5.png" draggable="false" alt="">
+                      <div class="game_logo"> <img src="@assets/imgs/gameslogo/modern-logo.png" alt=""> </div>
+                    </div>
+                  </div>
             </div>
-        <template v-slot:nextArrow>
-            <i class="fas fa-chevron-right" id="gallery-next"></i>
-        </template>
-    </VueSlickCarousel>
+        </div>
+
 </div>
 </template>
 <script>
-import VueSlickCarousel from 'vue-slick-carousel'
-import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-import SectionTitle from '@components/layout/SectionTitle.vue'
+// import Pagination from '@components/ui/Pagination';
+import SectionTitle from '@components/layout/SectionTitle.vue';
+// import { mapGetters } from 'vuex';
+// const perPageOptions = [5];
 export default {
-  components: { VueSlickCarousel, SectionTitle },
-  data () {
-    return {
-      sliderSettings: {
-        infinite: true,
-        speed: 500,
-        draggable: false,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        responsive: [
-          {
-            breakpoint: 1400,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3
-            }
-          },
-          {
-            breakpoint: 992,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2
-            }
-          }
-        ]
-      }
-    }
-  }
-}
+  components: { SectionTitle } // Pagination
+  // data () {
+  //  return {
+  // perPageOptions,
+  // pagination: { page: 1, perPage: perPageOptions[0] }
+  // };
+  // },
+  // computed: {
+  //   ...mapGetters('homeGames', ['getHomecarousel']),
+  //   computedTableData () {
+  //     if (!this.getHomecarousel) return [];
+  //     else {
+  //       const firstIndex = (this.pagination.page - 1) * this.pagination.perPage;
+  //       const lastIndex = this.pagination.page * this.pagination.perPage;
+
+  //       return this.getHomecarousel.slice(firstIndex, lastIndex);
+  //     }
+  //   }
+  // }
+};
 </script>
 
-<style lang="scss">
-  #gallery-next, #gallery-prev {
-    position: absolute;
-    z-index: 5;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    color: #ccc;
-    font-size: 2rem;
-    transition: all .5s ease-in-out;
-      &:hover {
-        color: #fff;
-      }
-  }
-  #gallery-prev {
-    left: 0;
-  }
-  #gallery-next {
-    right: 0;
-    text-align: end;
-  }
+<style lang="scss" scoped>
 </style>

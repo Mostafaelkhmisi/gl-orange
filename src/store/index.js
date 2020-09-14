@@ -14,7 +14,7 @@ import Vuex from 'vuex'
 
 // Modules
 import tournaments from './modules/tournaments'
-
+import homeGames from './modules/home-games'
 // Extend Vue to use Vuex
 Vue.use(Vuex)
 
@@ -23,5 +23,5 @@ const isDev = process.env.NODE_ENV !== 'production'
 // Export the store
 export default new Vuex.Store({
   strict: isDev,
-  modules: { tournaments }
+  modules: { tournaments, homeGames }
 })

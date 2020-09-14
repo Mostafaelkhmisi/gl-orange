@@ -32,8 +32,8 @@
 }
 
 .homeInfo{
-    background-image: url("../imgs/backgrounds/SHbg.jpg");
-    background-position: center center;
+    background-image: url("../imgs/backgrounds/info-bg.png");
+    background-repeat: no-repeat;
     .infoBackground-img{
         position: absolute;
         z-index: -1;
@@ -79,6 +79,9 @@
                     .inner-border-content{
                         text-align: left;
                         margin: 2% 10% 2% 10%;
+                        .go-gamespng{
+                            padding-top: 75px;
+                        }
                         p{
                             margin: 0!important;
                             line-height: 40px;
@@ -133,23 +136,55 @@
 }
 
 .games-section{
-    // background-image: url("../imgs/backgrounds/SHbg.jpg");
     background-color: black;
-    // background-position: center center;
     padding-top: 100px;
-    .slick-slider{
+    padding-bottom: 100px;
+    .home_carousel_imgs{
         width: 80%;
-        margin: auto;
-    }
-    .home-gallery-glider{
-        img{
+        margin: auto!important;
+        .carousel-imgs{
+            overflow: hidden;
             width: 100%;
+                .home_img_overlay{
+                    .main_img_container{
+                        position: relative;
+                        .secondImage{
+                            height: 490px;
+                        }
+                        .thirdImage{
+                            height: 300px;
+                        }
+                    }
+                    .game_logo{
+                        position: absolute;
+                        bottom: 10%;
+                        left: 28%;
+                        img{
+                            width: 190px;
+                        }
+                    }
+                    .main_img{
+                        width: 100%;
+                        height: 360px;
+                        object-fit: none;
+                        object-position: center center;
+                    }
+                }
+            
+        }
+        .firstImg{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .main_img{
+                height: 560px!important;
+            }
         }
     }
 }
 
 .Howtoplay-Section{
-    background-image: url('../imgs/backgrounds/976758.jpg');
+    background-image: url('../imgs/backgrounds/fixed-bg.png');
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
@@ -214,8 +249,20 @@
                 .inner_howto_box_rotate{
                     transform: rotate(-45deg);
                     margin: 35px;
-                    img{
-                        max-width: 200px;
+                    .client-logos{
+                        width: 180px;
+                        height: 180px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .consleImg{
+                        img{
+                            width: 120px!important;
+                        }
                     }
                     h6{
                         color: $white-text-color;

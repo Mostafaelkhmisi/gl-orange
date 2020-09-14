@@ -57,7 +57,7 @@ export default {
 <style lang="scss" scoped>
 .sidebar-size{
   height: 50px;
-  width: 490px;
+  width: 500px;
 }
 $orange-color:#ff6600;
 $sidebar-bg: linear-gradient(to right, $orange-color 1%, rgba(0, 0, 0, 0.1)),

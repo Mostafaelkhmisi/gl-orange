@@ -73,6 +73,13 @@
             transition: all .5s ease-in-out;
             cursor: pointer;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 213px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-position: center center;
+                object-fit: cover;
+            }
             &:hover .tournamentImg-overlay{
                 bottom: 0%!important;
                 height: 100%;
@@ -115,56 +122,7 @@
     background-color: black;
     padding-top: 100px;
     padding-bottom: 300px;
-    #gallery-prev,#gallery-next{
-        color: $white-text-color;
-        border: solid 1px $white-text-color;
-        position: absolute;
-        height: 40px;
-        width: 40px;
-        top: -21%;
-        transform: rotate(45deg);
-        z-index: 5;
-        font-size: 1.5rem;
-        cursor: pointer;
-        .gallery-next-orangeBox{
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        &:hover .gallery-next-orangeBox{
-            background-color: $orange-text-color;
-            margin-left: 5px;
-            margin-top: -5px;
-        }
-        &:hover .leftSliderOrange{
-            margin-left: -5px!important;
-            margin-top: 5px!important;
-        }
-        i{
-            transform: rotate(-45deg);
-        }
-    }
-    @media(max-width:992px){
-        #gallery-prev{
-            left: 1.5%!important;
-        }
-    }
-    #gallery-prev{
-        right: 20%;
-    }
-    #gallery-next{
-        right: 1.5%;
-    }
-    .slick-slider{
-        max-height: 400px;
-        top: 0!important;
-    }
-    .slick-slide{
-        margin: 15px;
-        width: 440px!important;
-    }
+
     .tournament-gallery-glider{
         outline: none;
         text-align: center;
@@ -187,6 +145,14 @@
             color: $white-text-color;
             cursor: pointer;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 246px;
+            overflow: hidden;
+            img{
+                width: 100% !important;
+                height: 100%;
+                object-position: center center;
+                object-fit: cover;
+            }
             .tournamentImg-overlay{
                 position: absolute;
                 background-color: rgba(0,0,0,0.5);
@@ -225,7 +191,6 @@
         }
     }
 }
-
 .inputContainer{
     position: relative;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -271,5 +236,175 @@
         background-color: #171717;
         color: $white-text-color;
         resize: none;
+    }
+}
+
+.tournament_page{
+    background-color: black;
+    .tournament_page_header{
+        .tournament_page_rightHeader{
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .leftHeader{
+            position: static;
+            z-index: 2;
+            padding-bottom: 100px;
+            .tournament_joinBtn_Container{
+                margin-left: 160px;
+                width: 120px;
+                position: relative;
+                &::before, &::after, button::before, button::after {
+                    display: block;
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                }
+                &::before {
+                    top: 5%;
+                    left: 4%;
+                    border-top: 1px solid $orange-text-color;
+                    border-left: 1px solid $orange-text-color;
+                }
+                &::after {
+                    top: 5%;
+                    right: 4%;
+                    border-top: 1px solid $orange-text-color;
+                    border-right: 1px solid $orange-text-color;
+                }
+                .tournament_joinBtn{
+                    background-image: repeating-linear-gradient(142deg, #FF6600 22px, rgba(0, 0, 0, 0.1) 26px);
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    position: relative;
+                    color: $white-text-color;
+                    display: flex;
+                    justify-content: center;
+                    width: 120px;
+                    height: 50px;
+                    &::before {
+                        bottom: 5%;
+                        left: 4%;
+                        border-bottom: 1px solid $orange-text-color;
+                        border-left: 1px solid $orange-text-color;
+                    }
+                    &::after {
+                        bottom: 5%;
+                        right: 4%;
+                        border-bottom: 1px solid $orange-text-color;
+                        border-right: 1px solid $orange-text-color;
+                    }
+                }
+            }
+        }
+        .tournament_image_title{
+            padding-top: 100px!important;
+            padding: 15px;
+            display: flex;
+            img{
+                width: 439px;
+            }
+            .tournament_title{
+                top: 0%;
+                margin-left: -2px;
+                padding: 10px 30px 10px 30px;
+                height: 55px;
+                margin-top: 40px;
+                color: $white-text-color;
+                background-image: linear-gradient(to right, $orange-text-color 1%, rgba(0, 0, 0, 0.1)),
+                repeating-linear-gradient(160deg, $orange-text-color 22px, rgba(0, 0, 0, 0.1) 28px);
+                h5{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .Tournament_Details{
+        .about_tournamentText{
+            text-align: center;
+            color: $orange-text-color;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-bottom: 50px;
+        }
+        .tournament_playersReg{
+            padding-top: 10px;
+            color: $white-text-color;
+            text-align: center;
+        }
+        .tournament_description{
+            color: #fff;
+        }
+        // tournaments Buttons and Tabs
+        .tournament-tabsContainer{
+            padding: 15px;
+            padding-top: 40px;
+            padding-bottom: 100px;
+            .tournament-tabs{
+                overflow: hidden;
+                background-color: black;
+                color: $white-text-color;
+                padding-left: 100px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                filter: drop-shadow(0px 7px 13px #FF66004D);
+                    p{
+                        padding-bottom: 0;
+                        margin-bottom: 0;
+                        color: #ccc;
+                    }
+            }
+            .tabBtns{
+                display: flex;
+                justify-content: center;
+                div{
+                    width: 15%;
+                    position: relative;
+                    margin: 5px;
+                    button{
+                        width: 100%;
+                        height: 70px;
+                        background-color: transparent;
+                        color: $white-text-color;
+                        transition: all .3s ease-in-out;
+                        border: none;
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        font-weight: 700;
+                        font-size: 1.2rem;
+                        outline: none;
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            height: 2px;
+                            width: 100%;
+                            background: $orange-text-color;
+                            transition: all .7s ease-in-out;
+                        }
+                        &:hover{
+                            color: $orange-text-color;
+                            background-color: $white-text-color;
+                        }
+                    }
+                }
+                .activeTab{
+                    color: $orange-text-color!important;
+                    background-color: $white-text-color!important;
+                }
+            }
+        }
+        // END OF tournaments Buttons and Tabs
+    }
+
+}
+
+@media(max-width:1000px){
+    .tournament-tabs{
+        padding-left: 40px!important;
     }
 }
