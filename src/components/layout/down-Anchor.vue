@@ -4,7 +4,7 @@
         <div class="scrollToContainer">
             <slot name="anchor"></slot>
         </div>
-        <div class="scrolltoText"> <h5>Scroll to show more</h5> </div>
+        <div class="scrolltoText"> <h5> <slot name="scrollText"> Scroll to show more </slot> </h5> </div>
     </div>
 </div>
 </template>

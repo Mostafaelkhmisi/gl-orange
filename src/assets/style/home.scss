@@ -357,8 +357,8 @@
         }
     }
     .formBtn{
-        margin: 20px;
-        width: 100%;
+        margin: auto;
+        width: 350px;
         display: flex;
         &::before, &::after, button::before, button::after {
             display: block;
@@ -368,19 +368,19 @@
             position: absolute;
         }
         &::before {
-            top: 4%;
-            left: 27%;
+            top: 5%;
+            left: 5%;
             border-top: 1px solid $orange-text-color;
             border-left: 1px solid $orange-text-color;
         }
         &::after {
-            top: 4%;
-            right: 27%;
+            top: 5%;
+            right: 5%;
             border-top: 1px solid $orange-text-color;
             border-right: 1px solid $orange-text-color;
         }
         button{
-            width: 50%;
+            width: 100%;
             margin: auto;
             padding: 15px;
             font-size: 1.2rem;
@@ -389,15 +389,19 @@
             border: none;
             outline: none;
             color: $white-text-color;
+            transition: all .3s ease-in-out;
+            &:hover{
+                background-color: $orange-text-color;
+            }
             &::before {
-                bottom: 4%;
-                left: 27%;
+                bottom: 5%;
+                left: 5%;
                 border-bottom: 1px solid $orange-text-color;
                 border-left: 1px solid $orange-text-color;
             }
             &::after {
-                bottom: 4%;
-                right: 27%;
+                bottom: 5%;
+                right: 5%;
                 border-bottom: 1px solid $orange-text-color;
                 border-right: 1px solid $orange-text-color;
             }
@@ -433,23 +437,6 @@
     .inputContainer{
         .inputs{
             margin-left: 0!important;
-        }
-    }
-    .formBtn{
-        &::before {
-            left: 28.5%!important;
-        }
-        &::after {
-            right: 28.5%!important;
-        }
-        button{
-            &::before {
-                left: 28.5%!important;
-            }
-            &::after {
-                right: 28.5%!important;
-            }
-            
         }
     }
 }

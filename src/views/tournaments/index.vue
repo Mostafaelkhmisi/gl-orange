@@ -30,6 +30,7 @@
                 <i class="fas fa-arrow-down"></i>
             </div>
         </template>
+        <template #scrollText> Browse All </template>
       </downAnchor>
 
   </div>

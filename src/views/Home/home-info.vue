@@ -7,6 +7,7 @@
             <i class="fas fa-arrow-down"></i>
         </div>
      </template>
+     <template #scrollText> Scroll to show more </template>
 </downAnchor>
 
     <div class="row m-0 Info-Details">
