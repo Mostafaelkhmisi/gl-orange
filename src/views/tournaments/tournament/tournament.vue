@@ -2,7 +2,7 @@
 <div class="tournament_page">
     <div class="tournament_page_header">
         <div class="row m-o p-0">
-            <div class="col-7 leftHeader">
+            <div class="col-12 leftHeader">
                 <div v-for="tournament in getTournaments" :key="tournament.id">
                     <div  v-if="tournament.id == $route.params.id">
                         <div class="tournament_image_title">
