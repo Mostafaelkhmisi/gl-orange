@@ -32,7 +32,13 @@
       </div>
     </div>
 
-    <div class="row m-0 p-0">
+      <transition-group
+        appear
+        tag="div"
+        class="row m-0 p-0"
+        name="fade"
+        mode="out-in"
+        >
       <div v-for="tournament in searchTournaments" :key="tournament.id" class="col-md-6 col-lg-4 col-xl-3 tournament-gallery-glider" >
         <router-link :to="'/tournament/'+tournament.id" draggable="false">
           <div class="img_imgOverlay">
@@ -61,7 +67,7 @@
           </div>
         </router-link>
       </div>
-    </div>
+      </transition-group>
   </div>
 </template>
 
@@ -171,11 +177,8 @@ export default {
         const lastIndex = this.pagination.page * this.pagination.perPage;
         return this.getTournaments.slice(firstIndex, lastIndex);
       } else if (this.form.game.length > 0) {
-        return this.getTournaments.filter(
-          (tournament) =>
-            tournament.title.toLowerCase().includes(this.form.game.toLowerCase()) ||
-            tournament.tournament.toLowerCase().includes(this.form.tournament.toLowerCase()) ||
-            tournament.game.toLowerCase().includes(this.form.game.toLowerCase())
+        return this.getTournaments.filter((tournament) =>
+          tournament.game.toLowerCase().includes(this.form.game.toLowerCase())
         );
       } else if (this.form.tournament.length > 0) {
         return this.getTournaments.filter((data) =>
@@ -208,5 +211,31 @@ export default {
   }
 };
 </script>
-<style>
+<style lang="scss" scoped>
+    .fade-enter-active {
+        animation: fade-in 600ms ease-out forwards;
+    }
+
+    .fade-leave-active {
+        display: none;
+        animation: fade-out 500ms ease-out forwards;
+    }
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fade-out {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
 </style>
