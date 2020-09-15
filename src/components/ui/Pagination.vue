@@ -95,6 +95,7 @@ export default {
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: all .2s ease-in-out;
         }
         &:hover .gallery-next-orangeBox{
             background-color: #FF6600;
