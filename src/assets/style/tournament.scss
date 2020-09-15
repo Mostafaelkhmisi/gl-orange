@@ -166,8 +166,14 @@
                 }
                 .game_logo{
                     float: right;
-                    padding-top: 40px;
                     padding-right: 30px;
+                    height: 100%;
+                    img{
+                        object-fit: contain;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
                 }
                 .tournamentTextsHolder{
                     padding-top: 40px;
