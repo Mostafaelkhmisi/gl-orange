@@ -148,13 +148,49 @@
             overflow: hidden;
             width: 100%;
                 .home_img_overlay{
+                    position: relative;
+                    &::before, &::after, .main_img_container::before, .main_img_container::after {
+                        display: block;
+                        content: "";
+                        width: 20px;
+                        height: 20px;
+                        position: absolute;
+                        z-index: 5;
+                    }
+                    &::before {
+                        top: 5%;
+                        left: 5%;
+                        border-top: 1px solid $white-text-color;
+                        border-left: 1px solid $white-text-color;
+                    }
+                    &::after {
+                        top: 5%;
+                        right: 5%;
+                        border-top: 1px solid $white-text-color;
+                        border-right: 1px solid $white-text-color;
+                    }
                     .main_img_container{
                         position: relative;
                         .secondImage{
-                            height: 490px;
+                            @include home-galleryVar(490px)
                         }
                         .thirdImage{
-                            height: 300px;
+                            @include home-galleryVar(300px)
+                        }
+                        .fourthImage{
+                            @include home-galleryVar(280px)
+                        }
+                        &::before {
+                            bottom: 5%;
+                            left: 5%;
+                            border-bottom: 1px solid $white-text-color;
+                            border-left: 1px solid $white-text-color;
+                        }
+                        &::after {
+                            bottom: 5%;
+                            right: 5%;
+                            border-bottom: 1px solid $white-text-color;
+                            border-right: 1px solid $white-text-color;
                         }
                     }
                     .game_logo{

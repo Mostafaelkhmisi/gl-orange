@@ -16,7 +16,7 @@
         </div> -->
         <div class="row home_carousel_imgs">
             <div class="col-4 carousel-imgs firstImg">
-                  <div class="home_img_overlay">
+                  <div class="home_img_overlay" data-aos="fade-right" data-aos-duration="1000">
                     <div class="main_img_container">
                       <img class="main_img" src="@assets/imgs/home-games/image-1.png" draggable="false" alt="">
                       <div class="game_logo"> <img src="@assets/imgs/gameslogo/pubg-logo.png" alt=""> </div>
@@ -24,28 +24,28 @@
                   </div>
             </div>
             <div class="col-4 carousel-imgs">
-                  <div class="home_img_overlay">
+                  <div class="home_img_overlay" data-aos="fade-down" data-aos-duration="1000">
                     <div class="main_img_container">
                       <img class="main_img secondImage" src="@assets/imgs/home-games/image-2.png" draggable="false" alt="">
                       <div class="game_logo"> <img src="@assets/imgs/gameslogo/mobilelegends-logo.png" alt=""> </div>
                     </div>
                   </div>
-                  <div class="home_img_overlay">
+                  <div class="home_img_overlay" data-aos="fade-up" data-aos-duration="1000">
                     <div class="main_img_container">
                       <img class="main_img thirdImage" src="@assets/imgs/home-games/image-3.png" draggable="false" alt="">
                       <div class="game_logo"> <img src="@assets/imgs/gameslogo/clash-logo.png" alt=""> </div>
                     </div>
                   </div>
             </div>
-            <div class="col-4 carousel-imgs">
-                  <div class="home_img_overlay">
+            <div class="col-4 carousel-imgs" >
+                  <div class="home_img_overlay" data-aos="fade-down" data-aos-duration="1000">
                     <div class="main_img_container">
-                      <img class="main_img" src="@assets/imgs/home-games/image-4.png" draggable="false" alt="">
+                      <img class="main_img fourthImage" src="@assets/imgs/home-games/image-4.png" draggable="false" alt="">
                       <div class="game_logo"> <img src="@assets/imgs/gameslogo/pubg-logo.png" alt=""> </div>
                     </div>
                   </div>
                   <div class="home_img_overlay">
-                    <div class="main_img_container">
+                    <div class="main_img_container" data-aos="fade-up" data-aos-duration="1000">
                       <img class="main_img" src="@assets/imgs/home-games/image-5.png" draggable="false" alt="">
                       <div class="game_logo"> <img src="@assets/imgs/gameslogo/modern-logo.png" alt=""> </div>
                     </div>

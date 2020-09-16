@@ -11,6 +11,11 @@ $orange-text-color:#FF6600;
     width: 80%;
     margin: auto!important;
 }
+
+@mixin home-galleryVar($height){
+    height: $height!important;
+}
+
 .rotated-titled-box{
     width: 15px;
     height: 15px;
