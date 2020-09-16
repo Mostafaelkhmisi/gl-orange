@@ -44,8 +44,8 @@
                       <div class="game_logo"> <img src="@assets/imgs/gameslogo/pubg-logo.png" alt=""> </div>
                     </div>
                   </div>
-                  <div class="home_img_overlay">
-                    <div class="main_img_container" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="home_img_overlay" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="main_img_container">
                       <img class="main_img" src="@assets/imgs/home-games/image-5.png" draggable="false" alt="">
                       <div class="game_logo"> <img src="@assets/imgs/gameslogo/modern-logo.png" alt=""> </div>
                     </div>
