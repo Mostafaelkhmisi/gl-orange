@@ -9,6 +9,7 @@
                             <img :src="tournament.img" width="100%" draggable="false">
                             <div class="tournament_title"> <h5> {{ tournament.title }} </h5> </div>
                         </div>
+                        <div class="tournament_title_mob"> <h5> {{ tournament.title }} </h5> </div>
                         <div class="tournament_joinBtn_Container">
                             <button class="row m-0 p-0 tournament_joinBtn"> JOIN</button>
                         </div>
@@ -45,16 +46,16 @@
                                     <h5>{{ tournament.format }}</h5>
                                 </Tab>
                                 <Tab name="Rules">
-                                    <h4 style="color:white;"> {{ tournament.description }}</h4>
+                                    <h5 style="color:white;"> {{ tournament.description }}</h5>
                                 </Tab>
                                 <Tab name="Prizes">
-                                    <h1 style="color:white;"> HELLLLLhhhhhhhhhhhhjjjjjjjjjjLLLLLLL</h1>
+                                    <h5 style="color:white;"> HELLLLLhhhhhhhhhhhhjjjjjjjjjjLLLLLLL</h5>
                                 </Tab>
                                 <Tab name="Schedule">
-                                    <h1 style="color:white;"> HELLLsdfffffffffffffffLLLLLLLLL</h1>
+                                    <h5 style="color:white;"> HELLLsdfffffffffffffffLLLLLLLLL</h5>
                                 </Tab>
                                 <Tab name="Contact">
-                                    <h1 style="color:white;"> HELLLLLLhghghghghghghghghghghghghghghghghghghghgLLLLLL</h1>
+                                    <h5 style="color:white;"> HELLLLLLhghghghghghghghghghghghghghghghghghghghgLLLLLL</h5>
                                 </Tab>
 
                             </Tabs>

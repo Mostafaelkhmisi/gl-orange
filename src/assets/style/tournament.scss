@@ -304,6 +304,17 @@
                 }
             }
         }
+        .tournament_title_mob{
+            color: $white-text-color;
+            background-image: linear-gradient(to right, $orange-text-color 1%, rgba(0, 0, 0, 0.1)),
+            repeating-linear-gradient(160deg, $orange-text-color 22px, rgba(0, 0, 0, 0.1) 28px);
+            padding:10px 30px 10px 30px;
+            height: 55px;
+            width: 440px;
+            margin-left: 15px;
+            margin-bottom: 15px;
+            display: none;
+        }
         .tournament_image_title{
             padding-top: 100px!important;
             padding: 15px;
@@ -416,9 +427,13 @@
 }
 
 @media(max-width:1000px){
-    .tournament-tabs{
-      padding-left: 40px!important;
+    .tournament_title_mob{
+        display: block!important;
     }
+    .tournament_title{
+        display: none!important;
+    }
+
     .mainTournament-Div{
       #gallery-prev{
         left: 2%!important;
@@ -427,4 +442,25 @@
         right: 3%!important;
       }
     }
+
+    .tournament-tabsContainer{
+        .tournament-tabs{
+            font-size: 1rem!important;
+            padding-left: 40px!important;
+            h5{
+                font-size: 1.15rem!important;
+            }
+        }
+        .tabBtns{
+            div{
+                width: 17%!important;
+                button{
+                    height: 55px!important;
+                    font-size: 1rem!important;
+
+                }
+            }
+        }
+    }
+
 }
