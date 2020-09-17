@@ -12,31 +12,27 @@
                 </div>
             </div>
             <div class="col-md-12 col-lg-6">
-                <form action="" autocomplete="off" @submit.prevent="onSubmit">
+                <form class="home_contact_form" action="" autocomplete="off" @submit.prevent="onSubmit">
                     <div class="col-12 inputContainer">
                         <label for="name" :class='clazzName'> Name </label>
                         <input @focus="onFocusName($event)" v-model="form.name" @blur="onBlur"  class="inputs" id="name" type="text" required>
-                     <!-- <p :class="{ 'contact-errors-text-show': $v.form.name.required }" class="contact-errors-text" v-if="!$v.form.name.required"> Please add your name.</p> -->
-                     <p :class="{ 'contact-errors-text-show': !$v.form.name.minLen }" class="contact-errors-text" v-if="!$v.form.name.minLen"> Your name cant be less than {{ $v.form.name.$params.minLen.min }} characters.</p>
+                        <p :class="{ 'contact-errors-text-show': !$v.form.name.minLen }" class="contact-errors-text" v-if="!$v.form.name.minLen"> Your name cant be less than {{ $v.form.name.$params.minLen.min }} characters.</p>
                     </div>
 
                     <div class="col-12 inputContainer">
                         <label for="email" :class='clazzEmail'> Email</label>
                         <input @focus="onFocusEmail($event)" v-model="form.email" @blur="onBlur" class="inputs" id="email" type="email" required>
-                    <!-- <p :class="{ 'contact-errors-text-show': $v.form.email.required }" class="contact-errors-text" v-if="!$v.form.email.required"> Please add your email.</p> -->
-                    <p :class="{ 'contact-errors-text-show': !$v.form.email.email }" class="contact-errors-text" v-if="!$v.form.email.email"> Please enter valid email.</p>
+                        <p :class="{ 'contact-errors-text-show': !$v.form.email.email }" class="contact-errors-text" v-if="!$v.form.email.email"> Please enter valid email.</p>
                     </div>
                     <div class="col-12 inputContainer">
                         <label for="subject" :class='clazzSubject'> Subject</label>
                         <input @focus="onFocusSubject($event)" v-model="form.subject" @blur="onBlur" class="inputs" id="subject" type="text" required>
-                    <!-- <p :class="{ 'contact-errors-text-show': $v.form.email.required }" class="contact-errors-text" v-if="!$v.form.email.required"> Please add your email.</p> -->
-                    <p :class="{ 'contact-errors-text-show': !$v.form.subject.minLen }" class="contact-errors-text" v-if="!$v.form.subject.minLen"> Please enter valid subject.</p>
+                        <p :class="{ 'contact-errors-text-show': !$v.form.subject.minLen }" class="contact-errors-text" v-if="!$v.form.subject.minLen"> Please enter valid subject.</p>
                     </div>
                     <div class="col-12 inputContainer">
                         <label for="yourMessage" :class='clazzTextArea'>Your message</label>
                         <textarea @focus="onFocusTextArea($event)" v-model="form.textArea" @blur="onBlur" class="inputs" id="yourMessage" name="yourMessage" rows="6" required></textarea>
-                     <!-- <p :class="{ 'contact-errors-text': $v.form.textArea.required }" class="contact-errors-text" v-if="!$v.form.textArea.required"> Please add your message.</p> -->
-                     <p :class="{ 'contact-errors-text-show': !$v.form.textArea.minLen }" class="contact-errors-text" v-if="!$v.form.textArea.minLen"> Your message cant be less than {{ $v.form.textArea.$params.minLen.min }} characters.</p>
+                        <p :class="{ 'contact-errors-text-show': !$v.form.textArea.minLen }" class="contact-errors-text" v-if="!$v.form.textArea.minLen"> Your message cant be less than {{ $v.form.textArea.$params.minLen.min }} characters.</p>
                     </div>
                      <div class="col-12 formBtn" > <button :class="{disabledColor : $v.form.$error}" > Submit</button> </div>
                 </form>

@@ -369,7 +369,7 @@
         .contact-errors-text-show{
             display: block!important;
             color: $orange-text-color;
-            padding-bottom: 20px;
+            width: 100%;
         }
             label{
                 position: absolute;
@@ -473,6 +473,9 @@
 }
 
 @media (max-width:1000px){
+    .home_contact_form{
+        padding-top: 50px;
+    }
     .rightInfo-content{
         width: 90%!important;
         .inner-border-content{
