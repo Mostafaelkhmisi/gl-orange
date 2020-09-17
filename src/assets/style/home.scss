@@ -358,6 +358,7 @@
        
     .inputContainer{
         position: relative;
+        user-select: none;
         .contact-errors-text{
             margin-left: 20px;
             position: absolute;

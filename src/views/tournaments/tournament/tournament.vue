@@ -6,7 +6,7 @@
                 <div v-for="tournament in getTournaments" :key="tournament.id">
                     <div  v-if="tournament.id == $route.params.id">
                         <div class="tournament_image_title">
-                            <img :src="tournament.img" width="100%" alt="">
+                            <img :src="tournament.img" width="100%" draggable="false">
                             <div class="tournament_title"> <h5> {{ tournament.title }} </h5> </div>
                         </div>
                         <div class="tournament_joinBtn_Container">
