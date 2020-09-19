@@ -15,7 +15,7 @@
             </div>
         </div> -->
         <div class="row home_carousel_imgs">
-            <div class="col-4 carousel-imgs firstImg">
+            <div class="col-md-6 col-lg-6 col-xl-4  carousel-imgs firstImg">
                   <div class="home_img_overlay" data-aos="fade-right" data-aos-duration="1000">
                     <div class="main_img_container">
                       <img class="main_img" src="@assets/imgs/home-games/image-1.png" draggable="false" alt="">
@@ -23,7 +23,7 @@
                     </div>
                   </div>
             </div>
-            <div class="col-4 carousel-imgs">
+            <div class="col-md-6 col-lg-6 col-xl-4 carousel-imgs">
                   <div class="home_img_overlay" data-aos="fade-down" data-aos-duration="1000">
                     <div class="main_img_container">
                       <img class="main_img secondImage" src="@assets/imgs/home-games/image-2.png" draggable="false" alt="">
@@ -37,7 +37,7 @@
                     </div>
                   </div>
             </div>
-            <div class="col-4 carousel-imgs" >
+            <div class="col-md-12 col-lg-12 col-xl-4 carousel-imgs" >
                   <div class="home_img_overlay" data-aos="fade-down" data-aos-duration="1000">
                     <div class="main_img_container">
                       <img class="main_img fourthImage" src="@assets/imgs/home-games/image-4.png" draggable="false" alt="">
