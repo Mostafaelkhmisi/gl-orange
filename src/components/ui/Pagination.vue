@@ -82,7 +82,6 @@ export default {
 .left-Arrow-Style, .right-Arrow-Style{
         border: solid 1px #fff;
         position: absolute;
-        display: flex;
         align-self: center;
         justify-content: center;
         height: 40px;
