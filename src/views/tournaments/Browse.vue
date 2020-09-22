@@ -24,8 +24,8 @@
         <input @focus="onFocusDay($event)" v-model="form.day" @blur="onBlur" class="inputs" id="date" type="date" required />
       </div>
       <div class="col-md-12 col-lg-6 col-xl-3 pl-0">
-        <Pagination v-if="getTournaments"
-          :totalRecords="getTournaments.length"
+        <Pagination v-if="searchResult"
+          :totalRecords="searchResult.length"
           :perPageOptions="perPageOptions"
           v-model="pagination"
         />
@@ -171,20 +171,33 @@ export default {
   computed: {
     ...mapGetters('tournaments', ['getTournaments']),
 
+    searchResultForTourament: function () {
+      return this.getTournaments.filter((tournament) =>
+        tournament.name.toLowerCase().includes(this.form.tournament.toLowerCase()));
+    },
+    searchResultForGame: function () {
+      return this.getTournaments.filter((data) =>
+        data.game.toLowerCase().includes(this.form.game.toLowerCase()));
+    },
+    searchResult: function () {
+      if (this.form.game.length > 0 && this.form.tournament.length > 0) {
+        return this.searchResultForTourament.filter((tournament) =>
+          tournament.game.toLowerCase().includes(this.form.game.toLowerCase()));
+      } else if (this.form.game.length > 0) {
+        return this.searchResultForGame;
+      } else if (this.form.tournament.length > 0) {
+        return this.searchResultForTourament;
+      } else {
+        return this.getTournaments;
+      }
+    },
     searchTournaments: function () {
-      if (this.getTournaments && this.form.game.length <= 0 && this.form.tournament.length <= 0) {
+      if (!this.searchResult) return [];
+      else {
         const firstIndex = (this.pagination.page - 1) * this.pagination.perPage;
         const lastIndex = this.pagination.page * this.pagination.perPage;
-        return this.getTournaments.slice(firstIndex, lastIndex);
-      } else if (this.form.game.length > 0) {
-        return this.getTournaments.filter((tournament) =>
-          tournament.game.toLowerCase().includes(this.form.game.toLowerCase())
-        );
-      } else if (this.form.tournament.length > 0) {
-        return this.getTournaments.filter((data) =>
-          data.game.toLowerCase().includes(this.form.tournament.toLowerCase())
-        );
-      } else return [];
+        return this.searchResult.slice(firstIndex, lastIndex);
+      }
     },
 
     clazzTournament: function () {
