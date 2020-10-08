@@ -61,7 +61,7 @@ export default {
 }
 $orange-color:#ff6600;
 $sidebar-bg: linear-gradient(to right, $orange-color 1%, rgba(0, 0, 0, 0.1)),
-    repeating-linear-gradient(160deg, $orange-color 22px, rgba(0, 0, 0, 0.1) 28px);
+    repeating-linear-gradient(160deg, $orange-color 22px, #ff660061 22px, rgba(0, 0, 0, 0.1) 28px);
 /*            MOBILE NAVBAR       */
 .w3-button {
   background-color: transparent !important;
