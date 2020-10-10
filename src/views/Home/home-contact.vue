@@ -43,10 +43,13 @@
 </template>
 
 <script>
-import SectionTitle from '@components/layout/SectionTitle.vue'
-import { required, email, minLength } from 'vuelidate/lib/validators'
+import SectionTitle from '@components/layout/SectionTitle.vue';
+import { required, email, minLength } from 'vuelidate/lib/validators';
 export default {
   components: { SectionTitle },
+  notifications: {
+    showContactError: {}
+  },
   data () {
     return {
       nameActive: false,
@@ -59,7 +62,7 @@ export default {
         subject: '',
         textArea: ''
       }
-    }
+    };
   },
   validations: {
     form: {
@@ -71,77 +74,91 @@ export default {
   },
   methods: {
     onFocusName: function (event) {
-      event.target.select()
-      this.nameActive = true
+      event.target.select();
+      this.nameActive = true;
     },
     onFocusEmail: function (event) {
-      event.target.select()
-      this.EmailActive = true
+      event.target.select();
+      this.EmailActive = true;
     },
     onFocusSubject: function (event) {
-      event.target.select()
-      this.SubjectActive = true
+      event.target.select();
+      this.SubjectActive = true;
     },
     onFocusTextArea: function (event) {
-      event.target.select()
-      this.textArea_Active = true
+      event.target.select();
+      this.textArea_Active = true;
     },
     onBlur: function (event) {
       if (this.form.name.length <= 0) {
-        this.nameActive = false
+        this.nameActive = false;
       }
       if (this.form.email.length <= 0) {
-        this.EmailActive = false
+        this.EmailActive = false;
       }
       if (this.form.subject.length <= 0) {
-        this.SubjectActive = false
+        this.SubjectActive = false;
       }
       if (this.form.textArea.length <= 0) {
-        this.textArea_Active = false
+        this.textArea_Active = false;
       }
     },
     onSubmit () {
-      this.$v.form.$touch()
-      if (this.$v.form.$pending || this.$v.form.$error) return
+      this.$v.form.$touch();
+      if (this.$v.form.$pending || this.$v.form.$error) {
+        this.showContactError({
+          title: 'Error',
+          message: 'The Form is not filled correctly',
+          type: 'error',
+          timeout: 4000
+        });
+      } else {
       // this.$store.dispatch('signup', formData)
-      console.log('submitted')
-      this.form.name = ''
-      this.form.email = ''
-      this.form.subject = ''
-      this.form.textArea = ''
+        console.log('submitted');
+        this.form.name = '';
+        this.form.email = '';
+        this.form.subject = '';
+        this.form.textArea = '';
+        this.showContactError({
+          title: 'Success',
+          message: 'The Form is submitted',
+          type: 'success',
+          timeout: 4000
+        });
+      }
     }
   },
   computed: {
     clazzName: function () {
-      let clzz = 'activeInput'
+      let clzz = 'activeInput';
       if (this.nameActive === false) {
-        clzz = ''
+        clzz = '';
       }
-      return clzz
+      return clzz;
     },
     clazzEmail: function () {
-      let clzz = 'activeInput'
+      let clzz = 'activeInput';
       if (this.EmailActive === false) {
-        clzz = ''
+        clzz = '';
       }
-      return clzz
+      return clzz;
     },
     clazzSubject: function () {
-      let clzz = 'activeInput'
+      let clzz = 'activeInput';
       if (this.SubjectActive === false) {
-        clzz = ''
+        clzz = '';
       }
-      return clzz
+      return clzz;
     },
     clazzTextArea: function () {
-      let clzz = 'activeInput'
+      let clzz = 'activeInput';
       if (this.textArea_Active === false) {
-        clzz = ''
+        clzz = '';
       }
-      return clzz
+      return clzz;
     }
   }
-}
+};
 </script>
 
 <style>
