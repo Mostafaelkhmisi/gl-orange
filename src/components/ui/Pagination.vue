@@ -56,7 +56,6 @@ export default {
           this.page = this.pages;
           break;
       }
-
       this.$emit('input', { page: this.page, perPage: this.perPage });
     }
   }
@@ -87,6 +86,7 @@ export default {
         height: 40px;
         width: 40px;
         transform: rotate(45deg);
+        cursor: pointer;
         z-index: 5;
         .gallery-next-orangeBox{
             width: 100%;

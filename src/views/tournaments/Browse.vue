@@ -31,43 +31,45 @@
         />
       </div>
     </div>
+      <div v-if="searchTournaments.length > 0">
+        <transition-group
+          appear
+          tag="div"
+          class="row m-0 p-0"
+          name="slide"
+          mode="out-in"
+          >
+        <div v-for="tournament in searchTournaments" :key="tournament.id" class="col-md-6 col-lg-4 col-xl-3 tournament-gallery-glider" >
+          <router-link :to="'/tournament/'+tournament.id" draggable="false">
+            <div class="img_imgOverlay">
+              <img :src="tournament.img" width="100%" draggable="false" alt />
+              <div class="tournamentImg-overlay">
+                <div class="game_logo">
+                  <img :src="tournament.gamelogo" alt srcset />
+                </div>
 
-      <transition-group
-        appear
-        tag="div"
-        class="row m-0 p-0"
-        name="fade"
-        mode="out-in"
-        >
-      <div v-for="tournament in searchTournaments" :key="tournament.id" class="col-md-6 col-lg-4 col-xl-3 tournament-gallery-glider" >
-        <router-link :to="'/tournament/'+tournament.id" draggable="false">
-          <div class="img_imgOverlay">
-            <img :src="tournament.img" width="100%" draggable="false" alt />
-            <div class="tournamentImg-overlay">
-              <div class="game_logo">
-                <img :src="tournament.gamelogo" alt srcset />
+                <div class="tournamentTextsHolder">
+                  <div class="tournamentDate">
+                    <i class="fas fa-user-friends"></i>
+                    {{tournament.date}}
+                  </div>
+                  <div class="tournamentPlayers">
+                    <i class="fas fa-user-friends"></i>
+                    {{tournament.joined}}
+                  </div>
+                  <div class="tournamentPrize">
+                    <i class="fas fa-trophy"></i>
+                    {{tournament.prize}} EGP
+                  </div>
+                </div>
+                <div class="tournamentName">{{ tournament.name }}</div>
               </div>
-
-              <div class="tournamentTextsHolder">
-                <div class="tournamentDate">
-                  <i class="fas fa-user-friends"></i>
-                  {{tournament.date}}
-                </div>
-                <div class="tournamentPlayers">
-                  <i class="fas fa-user-friends"></i>
-                  {{tournament.joined}}
-                </div>
-                <div class="tournamentPrize">
-                  <i class="fas fa-trophy"></i>
-                  {{tournament.prize}} EGP
-                </div>
-              </div>
-              <div class="tournamentName">{{ tournament.name }}</div>
             </div>
-          </div>
-        </router-link>
+          </router-link>
+        </div>
+        </transition-group>
       </div>
-      </transition-group>
+      <div v-else> <h1 style="text-align:center; color:white;"> There is no result </h1></div>
   </div>
 </template>
 
@@ -78,7 +80,7 @@ import SectionTitle from '@components/layout/SectionTitle.vue';
 import Pagination from '@components/ui/Pagination';
 import { mapGetters } from 'vuex';
 
-const perPageOptions = [8, 16, 20];
+const perPageOptions = [8];
 export default {
   components: { SectionTitle, Pagination },
   data () {
@@ -225,30 +227,61 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-    .fade-enter-active {
-        animation: fade-in 600ms ease-out forwards;
-    }
+//***********************************/
+.slide-enter-active,
+.slide-leave-active {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease,
+    filter 0.5s linear;
+}
+.slide-enter {
+  opacity: 0;
+  transform: translateX(200%);
+  filter: blur(10px);
+  text-shadow: -5px 0 5px rgba(255, 255, 255, 1);
+}
+.slide-leave-to {
+  opacity: 0;
+  transform: translateX(-200%);
+  filter: blur(10px);
+  text-shadow: -5px 0 5px rgba(255, 255, 255, 1);
+}
+.slide-enter-to {
+  transition-delay: 0.5s;
+}
+.slide-enter-to,
+.slide-leave {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+//***********************************/
+//***********************************/
+.slide-prev-enter-active,
+.slide-prev-leave-active {
+  transition: opacity .5s ease-in-out, transform .5s ease,
+    filter .5s linear;
+}
+.slide-prev-enter {
+  opacity: 0;
+  transform: translateX(-200%);
+  filter: blur(10px);
+  text-shadow: -5px 0 5px rgba(255, 255, 255, 1);
+}
+.slide-prev-leave-to {
+  opacity: 0;
+  transform: translateX(200%);
+  filter: blur(10px);
+  text-shadow: -5px 0 5px rgba(255, 255, 255, 1);
+}
+.slide-prev-enter-to {
+  transition-delay: .5s;
+}
+.slide-prev-enter-to,
+.slide-prev-leave {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+//***********************************/
 
-    .fade-leave-active {
-        display: none;
-        animation: fade-out 500ms ease-out forwards;
-    }
-
-    @keyframes fade-in {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-
-    @keyframes fade-out {
-        from {
-            opacity: 1;
-        }
-        to {
-            opacity: 0;
-        }
-    }
 </style>
