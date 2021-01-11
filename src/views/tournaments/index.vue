@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="mainTournament-Div">
-        <img class="Tournament-cover" src="https://via.placeholder.com/1920x400?text=Visit+Blogging.com+NowC/O https://placeholder.com/">
+        <img class="Tournament-cover" src="@assets/imgs/tournaments-cover/ss.jpg">
 
         <VueSlickCarousel v-bind="sliderSettings">
             <template v-slot:prevArrow>

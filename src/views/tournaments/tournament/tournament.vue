@@ -18,7 +18,7 @@
             </div>
 
             <div class="tournament_page_rightHeader">
-                <img src="https://via.placeholder.com/1300x400?text=Visit+Blogging.com+NowC/O https://placeholder.com/" alt="">
+                <img src="@assets/imgs/tournaments-cover/976758.jpg" alt="">
             </div>
 
         </div>
